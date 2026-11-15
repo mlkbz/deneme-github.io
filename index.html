@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Change Image Color On Hover Using CSS Mix-Blend-Mode</title>
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	section{
+	height: calc(700px - 50px);	
+	background: url("https://i.pinimg.com/originals/b9/36/04/b9360490a1b9c7fe42a9ee2a16c84a62.jpg") no-repeat;
+		background-size: 100% 700px;
+	}
+	ul{
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+    background: #f00;
+	width:100%;
+	height: 50px;
+    display: flex;
+	}
+	ul li{	
+	position: relative;
+	list-style: none;
+	width: 20%;
+	height: 100%;
+	mix-blend-mode:hue;
+	}
+	ul:hover li{
+		opacity: 0;
+	}
+	ul li:hover{
+		opacity: 1;
+	}
+	ul li:nth-child(1)
+	{	
+	background: #FF5500;
+	}
+	ul li:nth-child(2)
+	{	
+	background: #5500FF;
+	}
+	ul li:nth-child(3)
+	{
+	background: #00B3B3;
+	}
+	ul li:nth-child(4)
+	{
+	background: #44CC00;
+	}
+	ul li:nth-child(5)
+	{	
+	background: #E645a0;
+	}
+	
+	ul li:hover:nth-child(1)
+	{	
+	box-shadow:0 0 0 1500px #FF5500;
+	}
+	ul li:hover:nth-child(2)
+	{	
+	box-shadow:0 0 0 1500px #5500FF;
+	}
+	ul li:hover:nth-child(3)
+	{
+	box-shadow:0 0 0 1500px #00B3B3;
+	}
+	ul li:hover:nth-child(4)
+	{
+	box-shadow:0 0 0 1500px #44CC00;
+	}
+	ul li:hover:nth-child(5)
+	{	
+	box-shadow:0 0 0 1500px #E645a0;
+	}
+	
+</style>
+</head>
+<body>
+<section>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+</body>
+</html>
